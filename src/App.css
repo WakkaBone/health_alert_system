@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f3f6;
+}
+
+section {
+  margin: 10px;
+  background-color: white;
+}
+
+select,
+input[type="text"],
+input[type="time"],
+input[type="week"],
+input[type="number"] {
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  height: 1.5rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  color: #64bee4;
+}
+
+input[type="checkbox"]:not(:checked)::before,
+input[type="radio"]:not(:checked)::before {
+  content: "☐";
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before {
+  content: "🗹";
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+  color: grey;
+}
+
+hr {
+  width: 90vw;
+}
