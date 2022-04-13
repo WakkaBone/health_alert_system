@@ -1,5 +1,6 @@
 import React from "react";
 import { ModeHeader } from "../Components/Styled-Components/index";
+import PropTypes from "prop-types";
 
 const DropDownHeader = ({
   mode = "",
@@ -27,6 +28,14 @@ const DropDownHeader = ({
         : "Alert types"}
     </ModeHeader>
   );
+};
+
+DropDownHeader.propTypes = {
+  mode: PropTypes.string,
+  basicModeOn: PropTypes.bool,
+  setBasicModeOn: PropTypes.func,
+  advancedModeOn: PropTypes.bool,
+  setAdvancedModeOn: PropTypes.func,
 };
 
 export default DropDownHeader;

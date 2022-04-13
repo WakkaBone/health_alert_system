@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AdvancedMode from "./AdvancedMode";
 import BasicMode from "./BasicMode";
+import PropTypes from "prop-types";
 
 const Mode = ({ mode = "" }) => {
   const [basicModeOn, setBasicModeOn] = useState();
@@ -18,5 +19,7 @@ const Mode = ({ mode = "" }) => {
       <BasicMode basicModeOn={basicModeOn} setBasicModeOn={setBasicModeOn} />
     );
 };
+
+Mode.propTypes = { mode: PropTypes.oneOf(["basic", "advanced"]) };
 
 export default Mode;

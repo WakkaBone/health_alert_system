@@ -3,6 +3,7 @@ import DropDownHeader from "./DropDownHeader";
 import { ProductModeContext } from "../utils/Contexts";
 import { SettingsContext } from "../utils/Contexts";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const ToggleBlock = styled.div`
   max-height: ${(props) => (props.basicModeOn ? "0px" : "500px")};
@@ -87,6 +88,11 @@ const BasicMode = ({ basicModeOn = false, setBasicModeOn = (f) => f }) => {
       </ToggleBlock>
     </>
   );
+};
+
+BasicMode.propTypes = {
+  basicModeOn: PropTypes.bool,
+  setBasicModeOn: PropTypes.func,
 };
 
 export default BasicMode;

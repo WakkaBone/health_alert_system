@@ -1,6 +1,7 @@
 import React from "react";
 import Mode from "./Mode";
 import { MainHeader, ModeContainer } from "./Styled-Components";
+import PropTypes from "prop-types";
 
 const Main = ({ productMode = "" }) => {
   return (
@@ -17,5 +18,7 @@ const Main = ({ productMode = "" }) => {
     </div>
   );
 };
+
+Main.propTypes = { productMode: PropTypes.oneOf(["advanced", "basicOnly"]) };
 
 export default Main;

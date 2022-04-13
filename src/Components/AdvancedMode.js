@@ -3,6 +3,7 @@ import { SettingsContext } from "../utils/Contexts";
 import DropDownHeader from "./DropDownHeader";
 import styled from "styled-components";
 import { IndentedDiv } from "./Styled-Components";
+import PropTypes from "prop-types";
 
 const ToggleBlock = styled.div`
   max-height: ${(props) => (props.advancedModeOn ? "0px" : "500px")};
@@ -165,6 +166,11 @@ const AdvancedMode = ({
       </ToggleBlock>
     </>
   );
+};
+
+AdvancedMode.propTypes = {
+  advancedModeOn: PropTypes.bool,
+  setAdvancedModeOn: PropTypes.func,
 };
 
 export default AdvancedMode;

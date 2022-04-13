@@ -4,4 +4,6 @@ The system offers **two types of subscriptions**: **basic** and **advanced**. In
 
 Specified **settings are being saved to the local storage**. Once we have made any changes, we can click on 'SAVE' or 'DISCARD' buttons. If save - we launch the validation and if no mistakes - give the success message. If discard - we return to the previous state of settings saved in the local storage.
 
-This application is written on **React** with **Styled-Components** used for styling.
+This application is written on **React** with **Styled-Components** used for styling. **Prop-Types** used to do props' typing.
+
+Deployed version: https://6255a2060067ca008135c316--transcendent-selkie-6cde93.netlify.app/

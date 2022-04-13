@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Main from "./Components/Main";
 import Footer from "./Components/Footer";
-import { AppContainer } from "./Components/Styled-Components";
+import { AppContainer, Loader } from "./Components/Styled-Components";
 import { ProductModeContext, SettingsContext } from "./utils/Contexts";
 
 const App = () => {
@@ -108,15 +108,21 @@ const App = () => {
         value={{ settings, setSettings, changeInSettings }}
       >
         <AppContainer>
-          <Main productMode={productMode} />
-          <Footer
-            applyNewSettings={applyNewSettings}
-            discardNewSettings={discardNewSettings}
-            changeInSettings={changeInSettings}
-            settings={settings}
-            errorMessage={errorMessage}
-            successMessage={successMessage}
-          />
+          {!productMode ? (
+            <Loader />
+          ) : (
+            <>
+              <Main productMode={productMode} />
+              <Footer
+                applyNewSettings={applyNewSettings}
+                discardNewSettings={discardNewSettings}
+                changeInSettings={changeInSettings}
+                settings={settings}
+                errorMessage={errorMessage}
+                successMessage={successMessage}
+              />
+            </>
+          )}
         </AppContainer>
       </SettingsContext.Provider>
     </ProductModeContext.Provider>
